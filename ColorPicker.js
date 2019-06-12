@@ -249,8 +249,8 @@ function ColorPicker(selector){
                     hsv_color.h=real_hsv.h
                     hsv_color.s=real_hsv.s
                     hsv_color.v=real_hsv.v
-                    setColor();
                 }
+                setColor();
                }
            }
         })()
