@@ -1,6 +1,7 @@
 
 function ColorPicker(selector){
 
+    var randomstr= ""+Math.floor(Math.random()*10000000);
     function rgbToHsv(arr) {
         var h = 0, s = 0, v = 0;
         var r = arr[0], g = arr[1], b = arr[2];
@@ -73,22 +74,22 @@ function ColorPicker(selector){
         var div= document.querySelector(selector);
 
         var pickerDiv= document.createElement('div')
-        pickerDiv.className+="colorpicker";
+        pickerDiv.className+="colorpicker"+randomstr;
         div.appendChild(pickerDiv);
         var innerhtml =''
-        +'    <div class="color_item"><input /></div>'
-        +'            <div class="color_item"><input /></div>'
-        +'            <div class="color_item"><input /></div>'
-        +'            <div class="color_show">'
-        +'                <div class="select_color">'
-        +'                    <div class="select_color_select">'
-        +'                        <div class="colormap">'
+        +'    <div class="color_item'+randomstr+'"><input /></div>'
+        +'            <div class="color_item'+randomstr+'"><input /></div>'
+        +'            <div class="color_item'+randomstr+'"><input /></div>'
+        +'            <div class="color_show_gqqq77">'
+        +'                <div class="select_color_gqqq77">'
+        +'                    <div class="select_color_gqqq77_select">'
+        +'                        <div class="colormap_gqqq77">'
         +'                            <div class="mask1"></div>'
         +'                            <div class="mask2"></div>'
-        +'                            <div class="point"></div>'
+        +'                            <div class="point_gqqq77"></div>'
         +'                        </div>'
         +'                        <div class="huemap">'
-        +'                                <div class="huepoint"></div>'
+        +'                                <div class="huepoint_gqqq77"></div>'
         +'                        </div>'
         +'                    </div>'
         +'                    <div class="select_color_input">'
@@ -98,13 +99,13 @@ function ColorPicker(selector){
         +'                </div>'
         +'            </div>'
         +'            <style>'
-        +'                .colorpicker{'
+        +'                .colorpicker'+randomstr+' {'
         +'                    display: flex;'
         +'                    width: 100%;'
         +'                    align-items:center;'
         +'                    user-select:none;'
         +'                }'
-        +'                .color_item input{'
+        +'                .color_item'+randomstr+' input{'
         +'                width:80%;'
         +'                padding:0px;'
         +'                border:0px;'
@@ -112,19 +113,20 @@ function ColorPicker(selector){
         +'                border-bottom:1px solid gray;'
         +'                height:25px;'
         +'                }'
-        +'                .color_item{'
+        +'                .color_item'+randomstr+'{'
         +'                    padding :0px;'
         +'                    margin :0px;'
         +'                    flex-grow: 1;'
         +'                }'
-        +'                .color_show{'
+        +'                .color_show_gqqq77{'
         +'                    flex-shrink: 0;'
+        +'                    z-index: 998;'
         +'                    width: 20px;'
         +'                    height: 20px;'
         +'                    box-shadow: 0px 0px 1px gray;'
         +'                    position: relative;'
         +'                }'
-        +'            .select_color{'
+        +'            .select_color_gqqq77{'
         +'                position:absolute;'
         +'                width:220px;'
         +'                height:220px;'
@@ -135,35 +137,35 @@ function ColorPicker(selector){
         +'                background-color: #fafafa;'
         +'                flex-direction: column;'
         +'            }'
-        +'            .colorpicker .select_color_select{'
+        +'            .colorpicker'+randomstr+'  .select_color_gqqq77_select{'
         +'                flex-grow: 8;'
         +'                display: flex;'
         +'                flex-direction: row;'
         +'            }'
-        +'            .colorpicker .select_color_input{'
+        +'            .colorpicker'+randomstr+'  .select_color_input{'
         +'                display: flex;'
         +'                flex-direction: row;'
         +'                }'
-        +'                .colorpicker .colormap{'
+        +'                .colorpicker'+randomstr+'  .colormap_gqqq77{'
         +'                position: relative;'
         +'                flex-grow: 10;'
         +'                margin:5px;'
         +'                margin-right:0px;'
         +'                background-color: #f00;'
         +'                }'
-        +'                .colorpicker .colormap .mask1{'
+        +'                .colorpicker'+randomstr+'  .colormap_gqqq77 .mask1{'
         +'                    position: absolute;'
         +'                    width: 100%;'
         +'                    height: 100%;'
         +'                    background: linear-gradient(90deg,#FFF,hsla(0,0%,100%,0));'
         +'                }'
-        +'                .colorpicker .colormap .mask2{'
+        +'                .colorpicker'+randomstr+'  .colormap_gqqq77 .mask2{'
         +'                    position: absolute;'
         +'                    width: 100%;'
         +'                    height: 100%;'
         +'                    background:linear-gradient(0deg,#000,transparent);'
         +'                }'
-        +'                .colorpicker .colormap .point{'
+        +'                .colorpicker'+randomstr+'  .colormap_gqqq77 .point_gqqq77{'
         +'                    position: absolute;'
         +'                    width: 3px;'
         +'                    height: 3px;'
@@ -174,14 +176,14 @@ function ColorPicker(selector){
         +'                    border-radius: 2px;'
         +'                    border:1px solid white;'
         +'                }'
-        +'                .colorpicker .huemap{'
+        +'                .colorpicker'+randomstr+'  .huemap{'
         +'                    position: relative;'
         +'                margin:5px;'
         +'                flex-direction: row;'
         +'                flex-grow: 1;'
         +'                background:linear-gradient(red,#FF0,#0F0,#0FF,#00F,#F0F,red);'
         +'                }'
-        +'                .colorpicker .huemap .huepoint{'
+        +'                .colorpicker'+randomstr+'  .huemap .huepoint_gqqq77{'
         +'                    position: absolute;'
         +'                    user-select:false;'
         +'                    pointer-events: none;'
@@ -191,16 +193,16 @@ function ColorPicker(selector){
         +'                    border-top: 2px solid black;'
         +'                    border-bottom: 2px solid black;'
         +'                }'
-        +'                .colorpicker .input_hex{'
+        +'                .colorpicker'+randomstr+'  .input_hex{'
         +'                    flex-grow: 2;'
         +'                }'
-        +'                .colorpicker .input_hex input{'
+        +'                .colorpicker'+randomstr+'  .input_hex input{'
         +'                    color:gray;'
         +'                width:60%;'
         +'                margin:5px 10px;'
         +'                height:20px;'
         +'                }'
-        +'                .colorpicker .submit_color{'
+        +'                .colorpicker'+randomstr+'  .submit_color{'
         +'                    flex-shrink: 0;'
         +'                    display: inline-block;'
         +'                    margin:2px;'
@@ -214,13 +216,13 @@ function ColorPicker(selector){
         var real_hsv={h:0,s:0,v:0}
         var hsv_color={h:0,s:0,v:0}
         
-        var input_r=pickerDiv.getElementsByClassName("color_item")[0].getElementsByTagName("input")[0];
-        var input_g=pickerDiv.getElementsByClassName("color_item")[1].getElementsByTagName("input")[0];
-        var input_b=pickerDiv.getElementsByClassName("color_item")[2].getElementsByTagName("input")[0];
-        var showdiv=pickerDiv.getElementsByClassName("color_show")[0];
-        var selectDiv=pickerDiv.getElementsByClassName("select_color")[0];
-        var point=pickerDiv.getElementsByClassName("point")[0];
-        var huepoint=pickerDiv.getElementsByClassName("huepoint")[0];
+        var input_r=pickerDiv.getElementsByClassName("color_item"+randomstr)[0].getElementsByTagName("input")[0];
+        var input_g=pickerDiv.getElementsByClassName("color_item"+randomstr)[1].getElementsByTagName("input")[0];
+        var input_b=pickerDiv.getElementsByClassName("color_item"+randomstr)[2].getElementsByTagName("input")[0];
+        var showdiv=pickerDiv.getElementsByClassName("color_show_gqqq77")[0];
+        var selectDiv=pickerDiv.getElementsByClassName("select_color_gqqq77")[0];
+        var point=pickerDiv.getElementsByClassName("point_gqqq77")[0];
+        var huepoint=pickerDiv.getElementsByClassName("huepoint_gqqq77")[0];
         var input_hex =pickerDiv.getElementsByClassName("input_hex")[0].getElementsByTagName("input")[0];
         var submit_color =pickerDiv.getElementsByClassName("submit_color")[0];
 
@@ -295,7 +297,7 @@ function ColorPicker(selector){
         function handleHueMouseMove(e){
             if(!hueIsMouseDown){return}
             if(e.target==huepoint){return}
-            var percent=e.layerY/huepoint.parentNode.offsetHeight;
+            var percent=e.offsetY/huepoint.parentNode.offsetHeight;
             hsv_color.h=percent;
             setColor()
            
@@ -311,8 +313,8 @@ function ColorPicker(selector){
         function handlePointMouseMove(e){
             if(!pointIsMouseDown){return}
             if(e.target==point){return}
-            var percentX=e.layerX/point.parentNode.offsetWidth;
-            var percentY=1.0-e.layerY/point.parentNode.offsetHeight;
+            var percentX=e.offsetX/point.parentNode.offsetWidth;
+            var percentY=1.0-e.offsetY/point.parentNode.offsetHeight;
             hsv_color.s= percentX;
             hsv_color.v =percentY;
             setColor()
