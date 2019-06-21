@@ -29,6 +29,7 @@ function ColorPicker(selector){
         }
         h = (h/360);
         h=h<0?1+h:h
+        h=h>1?h-1:h
         s = (s);
         v = (v);
         return [h, s, v]
@@ -69,6 +70,16 @@ function ColorPicker(selector){
         r = Math.round(r * 255.0)
         g =  Math.round(g * 255.0)
         b =  Math.round(b * 255.0)
+        r=r>255?255:r
+        g=g>255?255:g
+        b=b>255?255:b
+
+
+        r=r<0?0:r
+        g=g<0?0:g
+        b=b<0?0:b
+
+
         return [r, g, b];
     }
     function _ColorPicker(selector){
