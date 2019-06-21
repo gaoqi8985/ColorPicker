@@ -28,6 +28,7 @@ function ColorPicker(selector){
             h = 60 * ((r - g) / (max - min)) + 240
         }
         h = (h/360);
+        h=h<0?1+h:h
         s = (s);
         v = (v);
         return [h, s, v]
